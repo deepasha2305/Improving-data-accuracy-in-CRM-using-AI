@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Duplicate Records</title>
+</head>
+<body>
+    <h1>Duplicate Records</h1>
+    <a href="/">Back to Dashboard</a>
+    <ul>
+        {% for record1, record2 in duplicates %}
+        <li>
+            <strong>Record 1:</strong> {{ record1 }}<br>
+            <strong>Record 2:</strong> {{ record2 }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

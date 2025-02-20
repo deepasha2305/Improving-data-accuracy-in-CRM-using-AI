@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRM Dashboard</title>
+</head>
+<body>
+    <h2>CRM Data Overview</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Company</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row["Name"] }}</td>
+            <td>{{ row["Email"] }}</td>
+            <td>{{ row["Phone"] }}</td>
+            <td>{{ row["Address"] }}</td>
+            <td>{{ row["Company"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/duplicates">Find Duplicates</a> |
+    <a href="/corrections">Fill Missing Data</a> |
+    <a href="/charts">Generate Charts</a>
+    <a href="/correlation">Correlation</a>
+
+</body>
+</html>
